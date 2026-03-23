@@ -1,0 +1,81 @@
+[gd_scene load_steps=7 format=3 uid="uid://c72rfis64vbkw"]
+
+[ext_resource type="Script" path="res://Scripts/Joueur/Player.cs" id="1_p8qyg"]
+[ext_resource type="Script" path="res://Scripts/Joueur/Crosshair.cs" id="2_oecxg"]
+[ext_resource type="Script" path="res://Scripts/Joueur/ContextComponent.cs" id="3_8th47"]
+[ext_resource type="FontFile" uid="uid://b75athrhv71os" path="res://Assets/Fonts/AfacadFlux-VariableFont_slnt,wght.ttf" id="5_fu3wf"]
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_4r332"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_5ryeh"]
+height = 1.99657
+
+[node name="Player" type="CharacterBody3D"]
+script = ExtResource("1_p8qyg")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.145, 0)
+mesh = SubResource("CapsuleMesh_4r332")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.14499, 0)
+shape = SubResource("CapsuleShape3D_5ryeh")
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.8, 0)
+fov = 65.0
+
+[node name="UserInterface" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 1
+
+[node name="Crosshair" type="CenterContainer" parent="UserInterface"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -20.0
+offset_top = -20.0
+offset_right = -20.0
+offset_bottom = -20.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("2_oecxg")
+
+[node name="ContextComponent" type="CenterContainer" parent="UserInterface" node_paths=PackedStringArray("Icon", "Context")]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = -20.0
+offset_top = 30.0
+offset_right = -20.0
+offset_bottom = 30.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("3_8th47")
+Icon = NodePath("HBoxContainer/TextureRect")
+Context = NodePath("HBoxContainer/Label")
+
+[node name="HBoxContainer" type="HBoxContainer" parent="UserInterface/ContextComponent"]
+layout_mode = 2
+alignment = 1
+
+[node name="TextureRect" type="TextureRect" parent="UserInterface/ContextComponent/HBoxContainer"]
+layout_mode = 2
+size_flags_stretch_ratio = 0.0
+
+[node name="Label" type="Label" parent="UserInterface/ContextComponent/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+theme_override_fonts/font = ExtResource("5_fu3wf")
+theme_override_font_sizes/font_size = 30
+horizontal_alignment = 1
+vertical_alignment = 1

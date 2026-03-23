@@ -1,0 +1,584 @@
+[gd_scene load_steps=20 format=3 uid="uid://cm63hidnoor40"]
+
+[ext_resource type="Texture2D" uid="uid://dsupna4ytsxw8" path="res://Assets/Images/ImagesTechnologie/FondBleu.png" id="1_5gm1l"]
+[ext_resource type="Script" path="res://Scripts/AmeliorationInterface/UpgradePanel.cs" id="2_hdotv"]
+[ext_resource type="Texture2D" uid="uid://bbbsrsx0awmgx" path="res://Assets/Images/ImagesTechnologie/PetitFondBleu.png" id="3_4rjpl"]
+[ext_resource type="Texture2D" uid="uid://edtyxcemyc87" path="res://Assets/Images/ImagesObjets/Réduction de la consommation du générateur.png" id="4_l6t88"]
+[ext_resource type="Texture2D" uid="uid://dg863dwadkaa6" path="res://Assets/Images/ImagesObjets/LED basse consommation.png" id="4_nmubk"]
+[ext_resource type="Texture2D" uid="uid://1ksld0mxl7wf" path="res://Assets/Images/ImagesObjets/Amélioration de la fiabilité de la clime.png" id="6_byskk"]
+[ext_resource type="Texture2D" uid="uid://b3uhmi6utejgx" path="res://Assets/Images/ImagesObjets/Panneaux solaires et batterie.png" id="6_hd5c0"]
+[ext_resource type="Texture2D" uid="uid://dla82pvhicc84" path="res://Assets/Images/ImagesObjets/Pot haute qualité.png" id="6_m6fep"]
+[ext_resource type="Texture2D" uid="uid://tl1wujfbw50u" path="res://Assets/Images/ImagesObjets/Réduction de la consommation de la clime.png" id="8_ipxvo"]
+[ext_resource type="FontFile" uid="uid://b75athrhv71os" path="res://Assets/Fonts/AfacadFlux-VariableFont_slnt,wght.ttf" id="10_kph4s"]
+[ext_resource type="Texture2D" uid="uid://csadit2csakf0" path="res://Assets/Images/ImagesTechnologie/IconePoint.png" id="11_5a046"]
+[ext_resource type="Texture2D" uid="uid://dugpibun0fbxw" path="res://Assets/Images/ImagesTechnologie/IconeDepenseAvant.png" id="12_hh8m3"]
+[ext_resource type="Texture2D" uid="uid://d21ky5fimeq37" path="res://Assets/Images/ImagesTechnologie/IconePrevisions.png" id="13_6nv6w"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_rmg6e"]
+texture = ExtResource("1_5gm1l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1k3ew"]
+texture = ExtResource("3_4rjpl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_my8q0"]
+texture = ExtResource("1_5gm1l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_weykn"]
+texture = ExtResource("3_4rjpl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x1ccn"]
+texture = ExtResource("3_4rjpl")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ihw8m"]
+texture = ExtResource("3_4rjpl")
+
+[node name="AmeliorationInterface" type="Node2D"]
+
+[node name="PanneauAmelioration" type="Panel" parent="."]
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_rmg6e")
+script = ExtResource("2_hdotv")
+
+[node name="TitrePrincipal" type="Label" parent="PanneauAmelioration"]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 52.0
+offset_right = 647.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Améliorations de la serre"
+
+[node name="Depenses" type="Button" parent="PanneauAmelioration"]
+layout_mode = 0
+offset_left = 456.0
+offset_top = 498.0
+offset_right = 572.0
+offset_bottom = 546.0
+text = "Dépenses"
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanneauAmelioration"]
+layout_mode = 0
+offset_left = 83.0
+offset_top = 129.0
+offset_right = 983.0
+offset_bottom = 482.0
+theme_override_constants/separation = 50
+
+[node name="Colonne0" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Partie0" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer/Colonne0"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titre0" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie0"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_1k3ew")
+text = "Générateur"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case0" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie0"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie0"]
+layout_mode = 2
+text = "Coût du générateur"
+horizontal_alignment = 1
+
+[node name="PopupMenu" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie0"]
+position = Vector2i(153, 184)
+size = Vector2i(521, 165)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Réduction de la consommation du générateur"
+item_1/icon = ExtResource("4_l6t88")
+item_1/id = 1
+
+[node name="Partie1" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer/Colonne0"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titre1" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie1"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_1k3ew")
+text = "Panneaux Solaires"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case1" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie1"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie1"]
+layout_mode = 2
+text = "Coût des panneaux solaires"
+horizontal_alignment = 1
+
+[node name="PopupMenu" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne0/Partie1"]
+position = Vector2i(153, 357)
+size = Vector2i(391, 172)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Panneaux solaires et batterie"
+item_1/icon = ExtResource("6_hd5c0")
+item_1/id = 1
+
+[node name="Colonne1" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="TitrePots" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_1k3ew")
+text = "Pots"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GrillePots" type="GridContainer" parent="PanneauAmelioration/HBoxContainer/Colonne1"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/h_separation = 35
+theme_override_constants/v_separation = 35
+columns = 2
+
+[node name="Pot1" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot1"]
+z_index = 1
+layout_mode = 0
+offset_left = 35.0
+offset_top = 37.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "1"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pot4" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot4"]
+z_index = 1
+layout_mode = 0
+offset_left = 35.0
+offset_top = 37.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "4"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pot2" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot2"]
+z_index = 1
+layout_mode = 0
+offset_left = 35.0
+offset_top = 37.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "2"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pot5" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot5"]
+z_index = 1
+layout_mode = 0
+offset_left = 35.0
+offset_top = 37.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "5"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pot3" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot3"]
+z_index = 1
+layout_mode = 0
+offset_left = 35.0
+offset_top = 37.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "3"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Pot6" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot6"]
+z_index = 1
+layout_mode = 0
+offset_left = 35.0
+offset_top = 37.0
+offset_right = 65.0
+offset_bottom = 65.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "6"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PopupMenu" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+auto_translate_mode = 1
+position = Vector2i(450, 184)
+size = Vector2i(305, 159)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Pot haute qualité"
+item_1/icon = ExtResource("6_m6fep")
+item_1/id = 1
+
+[node name="PopupMenu2" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+auto_translate_mode = 1
+position = Vector2i(450, 279)
+size = Vector2i(305, 159)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Pot haute qualité"
+item_1/icon = ExtResource("6_m6fep")
+item_1/id = 1
+
+[node name="PopupMenu3" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+auto_translate_mode = 1
+position = Vector2i(450, 374)
+size = Vector2i(305, 159)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Pot haute qualité"
+item_1/icon = ExtResource("6_m6fep")
+item_1/id = 1
+
+[node name="PopupMenu4" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+auto_translate_mode = 1
+position = Vector2i(450, 184)
+size = Vector2i(305, 159)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Pot haute qualité"
+item_1/icon = ExtResource("6_m6fep")
+item_1/id = 1
+
+[node name="PopupMenu5" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+auto_translate_mode = 1
+position = Vector2i(450, 279)
+size = Vector2i(305, 159)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Pot haute qualité"
+item_1/icon = ExtResource("6_m6fep")
+item_1/id = 1
+
+[node name="PopupMenu6" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots"]
+auto_translate_mode = 1
+position = Vector2i(450, 374)
+size = Vector2i(305, 159)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Pot haute qualité"
+item_1/icon = ExtResource("6_m6fep")
+item_1/id = 1
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne1"]
+layout_mode = 2
+text = "Coût des pots"
+horizontal_alignment = 1
+
+[node name="Colonne2" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer"]
+layout_mode = 2
+theme_override_constants/separation = 35
+
+[node name="Partie3" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer/Colonne2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titre3" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie3"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_1k3ew")
+text = "Lampes"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Case3" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie3"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie3"]
+layout_mode = 2
+text = "Coût des lampes"
+horizontal_alignment = 1
+
+[node name="PopupMenu" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie3"]
+position = Vector2i(705, 184)
+size = Vector2i(359, 165)
+item_count = 2
+item_0/text = "Ne rien sélectionner"
+item_1/text = "LED basse consommation"
+item_1/icon = ExtResource("4_nmubk")
+item_1/id = 1
+
+[node name="Partie4" type="VBoxContainer" parent="PanneauAmelioration/HBoxContainer/Colonne2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Titre4" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4"]
+custom_minimum_size = Vector2(250, 0)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+theme_override_styles/normal = SubResource("StyleBoxTexture_1k3ew")
+text = "Clime réversible"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4"]
+layout_mode = 2
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="Case4" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Case5" type="Button" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4/HBoxContainer"]
+custom_minimum_size = Vector2(60, 60)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+expand_icon = true
+
+[node name="Label" type="Label" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4"]
+layout_mode = 2
+text = "Coût de la clime"
+horizontal_alignment = 1
+
+[node name="PopupMenu" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4"]
+position = Vector2i(576, 356)
+size = Vector2i(490, 309)
+item_count = 3
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Amélioration de la fiabilité de la clime"
+item_1/icon = ExtResource("6_byskk")
+item_1/id = 1
+item_2/text = "Réduction de la consommation de la clime"
+item_2/icon = ExtResource("8_ipxvo")
+item_2/id = 2
+
+[node name="PopupMenu2" type="PopupMenu" parent="PanneauAmelioration/HBoxContainer/Colonne2/Partie4"]
+auto_translate_mode = 1
+position = Vector2i(576, 356)
+size = Vector2i(490, 309)
+item_count = 3
+item_0/text = "Ne rien sélectionner"
+item_1/text = "Amélioration de la fiabilité de la clime"
+item_1/icon = ExtResource("6_byskk")
+item_1/id = 1
+item_2/text = "Réduction de la consommation de la clime"
+item_2/icon = ExtResource("8_ipxvo")
+item_2/id = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanneauAmelioration/HBoxContainer"]
+layout_mode = 2
+
+[node name="PanneauDepense" type="Panel" parent="."]
+visible = false
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_my8q0")
+
+[node name="TitrePrincipal" type="Label" parent="PanneauDepense"]
+layout_mode = 0
+offset_left = 348.0
+offset_top = 52.0
+offset_right = 647.0
+offset_bottom = 94.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Dépenses"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="PanneauDepense"]
+layout_mode = 0
+offset_left = 452.0
+offset_top = 498.0
+offset_right = 568.0
+offset_bottom = 546.0
+text = "Retour"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanneauDepense"]
+layout_mode = 0
+offset_left = 204.0
+offset_top = 117.0
+offset_right = 569.0
+offset_bottom = 298.0
+scale = Vector2(2, 2)
+theme_override_constants/separation = 30
+alignment = 1
+
+[node name="DepensesJournalieres" type="Label" parent="PanneauDepense/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_fonts/font = ExtResource("10_kph4s")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_weykn")
+text = "Dépenses à la fin de cette journée"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="DepensesDepuisDebutAnnee" type="Label" parent="PanneauDepense/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_fonts/font = ExtResource("10_kph4s")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_x1ccn")
+text = "Dépenses depuis le début de l'année"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PrevisionDepenses" type="Label" parent="PanneauDepense/VBoxContainer"]
+custom_minimum_size = Vector2(0, 30)
+layout_mode = 2
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_fonts/font = ExtResource("10_kph4s")
+theme_override_font_sizes/font_size = 15
+theme_override_styles/normal = SubResource("StyleBoxTexture_ihw8m")
+text = "Prévision des dépenses pour cette année"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Graph1" type="TextureRect" parent="PanneauDepense"]
+layout_mode = 0
+offset_left = 78.0
+offset_top = 129.0
+offset_right = 412.0
+offset_bottom = 425.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("11_5a046")
+stretch_mode = 2
+
+[node name="Graph2" type="TextureRect" parent="PanneauDepense"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 241.0
+offset_right = 413.0
+offset_bottom = 537.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("12_hh8m3")
+stretch_mode = 2
+
+[node name="Graph3" type="TextureRect" parent="PanneauDepense"]
+layout_mode = 0
+offset_left = 77.0
+offset_top = 357.0
+offset_right = 411.0
+offset_bottom = 653.0
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("13_6nv6w")
+stretch_mode = 2
+
+[node name="Fond" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(576.5, 330)
+scale = Vector2(8.14893, 7.77381)
+texture = ExtResource("3_4rjpl")
+
+[connection signal="pressed" from="PanneauAmelioration/Depenses" to="PanneauAmelioration" method="OnChangePanelPressed" binds= ["Ameliorations"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne0/Partie0/Case0" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Generateur"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne0/Partie0/PopupMenu" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Generateur"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne0/Partie1/Case1" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Panneaux"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne0/Partie1/PopupMenu" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Panneaux"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot1" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Pot1"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot4" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Pot4"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot2" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Pot2"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot5" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Pot5"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot3" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Pot3"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/Pot6" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Pot6"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/PopupMenu" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Pot1"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/PopupMenu2" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Pot2"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/PopupMenu3" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Pot3"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/PopupMenu4" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Pot4"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/PopupMenu5" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Pot5"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne1/GrillePots/PopupMenu6" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Pot6"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne2/Partie3/Case3" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Lampes"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne2/Partie3/PopupMenu" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Lampes"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne2/Partie4/HBoxContainer/Case4" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Clime1"]]
+[connection signal="pressed" from="PanneauAmelioration/HBoxContainer/Colonne2/Partie4/HBoxContainer/Case5" to="PanneauAmelioration" method="OnButtonsPopupPressed" binds= ["Clime2"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne2/Partie4/PopupMenu" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Clime1"]]
+[connection signal="id_pressed" from="PanneauAmelioration/HBoxContainer/Colonne2/Partie4/PopupMenu2" to="PanneauAmelioration" method="OnPopupItemPressed" binds= ["Clime2"]]
+[connection signal="pressed" from="PanneauDepense/Button" to="PanneauAmelioration" method="OnChangePanelPressed" binds= ["Depenses"]]

@@ -1,0 +1,129 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://csuka4yl50kdo"
+path="res://.godot/imported/Basilic.glb-d09ba90af9b11d248f5a65d355a483bc.scn"
+
+[deps]
+
+source_file="res://Assets/Glb/Plants/Basilic.glb"
+dest_files=["res://.godot/imported/Basilic.glb-d09ba90af9b11d248f5a65d355a483bc.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"meshes": {
+"Basilic_BézierCurve": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade1.res"
+},
+"Basilic_BézierCurve_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade2.res"
+},
+"Basilic_BézierCurve_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade3.res"
+},
+"Basilic_BézierCurve_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade4.res"
+},
+"Basilic_BézierCurve_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicRecoltable.res"
+},
+"Basilic_BézierCurve_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade1Morte.res"
+},
+"Basilic_BézierCurve_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade2Morte.res"
+},
+"Basilic_BézierCurve_007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade3Morte.res"
+},
+"Basilic_BézierCurve_008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicStade4Morte.res"
+},
+"Basilic_BézierCurve_009": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/BasilicRecoltableMorte.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

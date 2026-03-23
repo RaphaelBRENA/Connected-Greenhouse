@@ -1,0 +1,22 @@
+[gd_resource type="RibbonTrailMesh" load_steps=4 format=3 uid="uid://i5sxdmoig6s"]
+
+[ext_resource type="Texture2D" uid="uid://dtr27caxl032p" path="res://Assets/Material/Circle.png" id="1_knrno"]
+
+[sub_resource type="Curve" id="Curve_4a7wk"]
+max_value = 0.1
+_data = [Vector2(0, 0), 0.0, 0.0, 0, 0, Vector2(0.0489362, 0.0451433), 0.57565, 0.57565, 0, 0, Vector2(0.123404, 0.0741242), 0.298156, 0.298156, 0, 0, Vector2(0.278723, 0.065844), -0.202694, -0.202694, 0, 0, Vector2(0.63617, 0), -0.243233, 0.0, 0, 0]
+point_count = 5
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_fei5p"]
+transparency = 1
+cull_mode = 2
+shading_mode = 0
+vertex_color_use_as_albedo = true
+albedo_texture = ExtResource("1_knrno")
+use_particle_trails = true
+
+[resource]
+material = SubResource("StandardMaterial3D_fei5p")
+size = 0.3
+section_length = 0.1
+curve = SubResource("Curve_4a7wk")

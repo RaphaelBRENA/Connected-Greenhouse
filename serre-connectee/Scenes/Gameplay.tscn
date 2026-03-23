@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://da2l7qoy7uqwv"]
+
+[ext_resource type="PackedScene" uid="uid://c72rfis64vbkw" path="res://Scenes/Player.tscn" id="1_bv6d5"]
+[ext_resource type="PackedScene" uid="uid://dg0coobv5y1jj" path="res://Scenes/World.tscn" id="1_ypktu"]
+[ext_resource type="PackedScene" uid="uid://g542bkrpn4sp" path="res://Scenes/Menu/Pause/PauseMenu.tscn" id="3_jtp41"]
+[ext_resource type="PackedScene" uid="uid://b36pr86co2060" path="res://Scenes/Interface/Inventaire/InventaireInterface.tscn" id="4_pa35x"]
+
+[node name="Gameplay" type="Node3D"]
+
+[node name="World" type="CanvasLayer" parent="."]
+
+[node name="World" parent="World" instance=ExtResource("1_ypktu")]
+
+[node name="Player" type="CanvasLayer" parent="."]
+
+[node name="Player" parent="Player" instance=ExtResource("1_bv6d5")]
+
+[node name="Inventaire" type="CanvasLayer" parent="."]
+
+[node name="InventaireInterface" parent="Inventaire" instance=ExtResource("4_pa35x")]
+visible = false
+
+[node name="Pause" type="CanvasLayer" parent="."]
+
+[node name="PauseMenu" parent="Pause" instance=ExtResource("3_jtp41")]
+visible = false

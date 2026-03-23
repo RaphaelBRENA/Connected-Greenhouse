@@ -1,0 +1,231 @@
+[gd_scene load_steps=8 format=3 uid="uid://cit1v8ge1iusd"]
+
+[ext_resource type="Texture2D" uid="uid://doty8wtyri35t" path="res://Assets/Images/ImagesTechnologie/FondThermostat.png" id="1_dfh2l"]
+[ext_resource type="Script" path="res://Scripts/Programmations/ProgramScriptButton.cs" id="2_hm2yw"]
+[ext_resource type="Texture2D" uid="uid://dsupna4ytsxw8" path="res://Assets/Images/ImagesTechnologie/FondBleu.png" id="3_c7h8k"]
+[ext_resource type="Script" path="res://Scripts/Programmations/ThermostatProgrammingPanel.cs" id="4_1go0c"]
+[ext_resource type="Texture2D" uid="uid://bbbsrsx0awmgx" path="res://Assets/Images/ImagesTechnologie/PetitFondBleu.png" id="5_7a5jt"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_qhfik"]
+texture = ExtResource("1_dfh2l")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y8xql"]
+texture = ExtResource("3_c7h8k")
+
+[node name="ThermostatInterface" type="Node2D"]
+
+[node name="ControlPanneau1" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanneauThermostat" type="Panel" parent="ControlPanneau1"]
+layout_mode = 0
+offset_left = 224.0
+offset_top = 5.0
+offset_right = 914.0
+offset_bottom = 638.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_qhfik")
+
+[node name="Titre" type="Label" parent="ControlPanneau1/PanneauThermostat"]
+layout_mode = 0
+offset_left = 160.0
+offset_top = 164.0
+offset_right = 517.0
+offset_bottom = 206.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "Température détectée dans la serre :"
+
+[node name="Température" type="Label" parent="ControlPanneau1/PanneauThermostat"]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -45.0
+offset_top = 199.0
+offset_right = 41.0
+offset_bottom = 268.0
+grow_horizontal = 2
+theme_override_font_sizes/font_size = 50
+text = "[]°C"
+horizontal_alignment = 1
+
+[node name="Titre2" type="Label" parent="ControlPanneau1/PanneauThermostat"]
+layout_mode = 0
+offset_left = 245.0
+offset_top = 345.0
+offset_right = 414.0
+offset_bottom = 373.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 20
+text = "Programmation :"
+
+[node name="Programmer" type="Button" parent="ControlPanneau1/PanneauThermostat"]
+layout_mode = 0
+offset_left = 250.0
+offset_top = 474.0
+offset_right = 441.0
+offset_bottom = 535.0
+theme_override_font_sizes/font_size = 25
+text = "Programmer"
+script = ExtResource("2_hm2yw")
+
+[node name="ValeurJour" type="Label" parent="ControlPanneau1/PanneauThermostat"]
+layout_mode = 0
+offset_left = 307.0
+offset_top = 373.0
+offset_right = 376.0
+offset_bottom = 428.0
+theme_override_font_sizes/font_size = 40
+text = "[]°C"
+
+[node name="ControlPanneau2" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanneauProgrammation" type="Panel" parent="ControlPanneau2"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_y8xql")
+script = ExtResource("4_1go0c")
+
+[node name="Titre" type="Label" parent="ControlPanneau2/PanneauProgrammation"]
+layout_mode = 0
+offset_left = 282.0
+offset_top = 48.0
+offset_right = 738.0
+offset_bottom = 90.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de la température"
+
+[node name="Valider" type="Button" parent="ControlPanneau2/PanneauProgrammation"]
+layout_mode = 0
+offset_left = 820.0
+offset_top = 487.0
+offset_right = 960.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("2_hm2yw")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneau2/PanneauProgrammation"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si température"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Si"]
+layout_mode = 2
+min_value = -15.0
+max_value = 40.0
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Si"]
+layout_mode = 2
+text = "°C"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Régler le thermostat à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/ActionSi"]
+layout_mode = 2
+min_value = -15.0
+max_value = 40.0
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "°C"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Régler le thermostat à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+min_value = -15.0
+max_value = 40.0
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneau2/PanneauProgrammation/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "°C"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneau2/PanneauProgrammation"]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 516.0
+offset_right = 807.0
+offset_bottom = 547.0
+text = "Programmation activre"
+
+[node name="Fond" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(579, 324)
+scale = Vector2(8.19858, 7.83333)
+texture = ExtResource("5_7a5jt")
+
+[connection signal="pressed" from="ControlPanneau1/PanneauThermostat/Programmer" to="ControlPanneau1/PanneauThermostat/Programmer" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneau2/PanneauProgrammation/Valider" to="ControlPanneau2/PanneauProgrammation/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneau2/PanneauProgrammation/CheckButton" to="ControlPanneau2/PanneauProgrammation" method="OnCheckButtonToggle"]

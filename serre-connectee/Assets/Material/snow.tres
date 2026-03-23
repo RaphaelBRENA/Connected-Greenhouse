@@ -1,0 +1,10 @@
+[gd_resource type="SphereMesh" load_steps=2 format=3 uid="uid://b40jbdwnbit3r"]
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_oi16l"]
+transparency = 1
+blend_mode = 1
+
+[resource]
+material = SubResource("StandardMaterial3D_oi16l")
+radius = 0.02
+height = 0.04

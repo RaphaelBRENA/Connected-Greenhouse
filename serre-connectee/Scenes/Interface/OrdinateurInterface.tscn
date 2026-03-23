@@ -1,0 +1,1412 @@
+[gd_scene load_steps=14 format=3 uid="uid://pcihyi565go5"]
+
+[ext_resource type="Texture2D" uid="uid://cq3fgi675hhy7" path="res://Assets/Images/ImagesTechnologie/Ecran.png" id="1_ekf1i"]
+[ext_resource type="Script" path="res://Scripts/Programmations/ComputerInterface.cs" id="1_xameg"]
+[ext_resource type="Texture2D" uid="uid://djsftbua471k0" path="res://Assets/Images/ImagesTechnologie/PetiteFenetreProcessus.png" id="2_1uprn"]
+[ext_resource type="Texture2D" uid="uid://cf3t6jc31cc4f" path="res://Assets/Images/ImagesTechnologie/FenetreProcessus.png" id="3_nbyha"]
+[ext_resource type="Script" path="res://Scripts/Programmations/ProgramScriptButton.cs" id="4_tku7c"]
+[ext_resource type="Texture2D" uid="uid://dsupna4ytsxw8" path="res://Assets/Images/ImagesTechnologie/FondBleu.png" id="5_f8apg"]
+[ext_resource type="Texture2D" uid="uid://bbbsrsx0awmgx" path="res://Assets/Images/ImagesTechnologie/PetitFondBleu.png" id="6_12j5t"]
+[ext_resource type="Script" path="res://Scripts/Programmations/LampProgrammingPanel.cs" id="6_l140t"]
+[ext_resource type="Script" path="res://Scripts/Programmations/LampsOptionButton.cs" id="7_t1n8p"]
+[ext_resource type="Script" path="res://Scripts/Programmations/ShuttersProgrammingPanel.cs" id="8_mkduy"]
+[ext_resource type="Script" path="res://Scripts/Programmations/PotsProgrammingPanel.cs" id="9_48daj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j11pg"]
+texture = ExtResource("1_ekf1i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iv4b8"]
+texture = ExtResource("5_f8apg")
+
+[node name="OrdinateurInterface" type="Node2D"]
+script = ExtResource("1_xameg")
+
+[node name="ControlPanneauPrincipal" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanneauPrincipal" type="Panel" parent="ControlPanneauPrincipal"]
+layout_mode = 0
+offset_left = 28.0
+offset_top = 1.0
+offset_right = 1134.0
+offset_bottom = 653.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_j11pg")
+
+[node name="FenetreUne" type="Sprite2D" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+position = Vector2(271, 226)
+scale = Vector2(0.62691, 0.50212)
+texture = ExtResource("2_1uprn")
+
+[node name="FenetreDeux" type="Sprite2D" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+position = Vector2(269.3, 475.5)
+scale = Vector2(0.624444, 0.527352)
+texture = ExtResource("2_1uprn")
+
+[node name="FenetreTrois" type="Sprite2D" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+position = Vector2(802.5, 352.999)
+scale = Vector2(0.751563, 0.708042)
+texture = ExtResource("3_nbyha")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+layout_mode = 0
+offset_left = 107.0
+offset_top = 142.0
+offset_right = 428.0
+offset_bottom = 651.0
+theme_override_constants/separation = 25
+
+[node name="Titre" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Lampes"
+horizontal_alignment = 1
+
+[node name="Lampes" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "[] lux"
+horizontal_alignment = 1
+
+[node name="ProgrammationLampes" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Programmer"
+script = ExtResource("4_tku7c")
+
+[node name="Titre2" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "
+Volets"
+horizontal_alignment = 1
+
+[node name="Volets" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "[] lux"
+horizontal_alignment = 1
+
+[node name="ProgrammationVolets" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Programmer"
+script = ExtResource("4_tku7c")
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+layout_mode = 0
+offset_left = 644.0
+offset_top = 153.0
+offset_right = 972.0
+offset_bottom = 283.0
+theme_override_constants/separation = 15
+
+[node name="Titre" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 30
+text = "Arrosage Automatique"
+horizontal_alignment = 1
+
+[node name="SousTitre" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer2"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Humidité par case
+pour chaque pot"
+horizontal_alignment = 1
+
+[node name="Infobulle" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+layout_mode = 0
+offset_left = 596.0
+offset_top = 559.0
+offset_right = 1016.0
+offset_bottom = 594.0
+theme_override_font_sizes/font_size = 20
+text = "🛈 Cliquez sur un pot pour le programmer !"
+horizontal_alignment = 1
+
+[node name="GrillePots" type="GridContainer" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+layout_mode = 2
+offset_left = 709.0
+offset_top = 297.0
+offset_right = 904.0
+offset_bottom = 547.0
+theme_override_constants/h_separation = 35
+theme_override_constants/v_separation = 35
+columns = 2
+
+[node name="ProgrammationPot3" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/GrillePots"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pot 3"
+script = ExtResource("4_tku7c")
+
+[node name="ProgrammationPot6" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/GrillePots"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pot 6"
+script = ExtResource("4_tku7c")
+
+[node name="ProgrammationPot2" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/GrillePots"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pot 2"
+script = ExtResource("4_tku7c")
+
+[node name="ProgrammationPot5" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/GrillePots"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pot 5"
+script = ExtResource("4_tku7c")
+
+[node name="ProgrammationPot1" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/GrillePots"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pot 1"
+script = ExtResource("4_tku7c")
+
+[node name="ProgrammationPot4" type="Button" parent="ControlPanneauPrincipal/PanneauPrincipal/GrillePots"]
+custom_minimum_size = Vector2(80, 60)
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "Pot 4"
+script = ExtResource("4_tku7c")
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+layout_mode = 2
+offset_left = 625.0
+offset_top = 296.0
+offset_right = 705.0
+offset_bottom = 541.0
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Label3" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "[] %"
+horizontal_alignment = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "[] %"
+horizontal_alignment = 1
+
+[node name="Label1" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer3"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "[] %"
+horizontal_alignment = 1
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="ControlPanneauPrincipal/PanneauPrincipal"]
+layout_mode = 2
+offset_left = 911.0
+offset_top = 296.0
+offset_right = 991.0
+offset_bottom = 541.0
+theme_override_constants/separation = 70
+alignment = 1
+
+[node name="Label6" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "[] %"
+horizontal_alignment = 1
+
+[node name="Label5" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "[] %"
+horizontal_alignment = 1
+
+[node name="Label4" type="Label" parent="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer4"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 25
+text = "[] %"
+horizontal_alignment = 1
+
+[node name="Fond" type="Sprite2D" parent="."]
+z_index = -1
+position = Vector2(574.5, 326)
+scale = Vector2(8.21986, 7.90476)
+texture = ExtResource("6_12j5t")
+
+[node name="ControlPanneauxSecondaires" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="PanneauProgrammationLampes" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("6_l140t")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes"]
+layout_mode = 0
+offset_left = 323.0
+offset_top = 47.0
+offset_right = 672.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation des lampes"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 204.0
+offset_right = 760.0
+offset_bottom = 375.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si luminosité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Si"]
+layout_mode = 2
+min_value = 2000.0
+max_value = 100000.0
+step = 500.0
+value = 2000.0
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Si"]
+layout_mode = 2
+text = "lux"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    "
+
+[node name="OptionButtonSi" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "Allumer"
+popup/item_1/text = "Eteindre"
+popup/item_1/id = 1
+script = ExtResource("7_t1n8p")
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "les lampes"
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi"]
+visible = false
+layout_mode = 2
+text = "et régler la luminosité à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi"]
+visible = false
+layout_mode = 2
+min_value = 200.0
+max_value = 20000.0
+step = 100.0
+value = 200.0
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi"]
+visible = false
+layout_mode = 2
+text = "lux"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    "
+
+[node name="OptionButtonSinon" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "Allumer"
+popup/item_1/text = "Eteindre"
+popup/item_1/id = 1
+script = ExtResource("7_t1n8p")
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "les lampes"
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon"]
+visible = false
+layout_mode = 2
+text = "et régler la luminosité à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon"]
+visible = false
+layout_mode = 2
+min_value = 200.0
+max_value = 20000.0
+step = 100.0
+value = 200.0
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon"]
+visible = false
+layout_mode = 2
+text = "lux"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationLampes"]
+layout_mode = 0
+offset_left = 594.0
+offset_top = 511.0
+offset_right = 815.0
+offset_bottom = 542.0
+text = "Programmation active"
+
+[node name="PanneauProgrammationVolets" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("8_mkduy")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets"]
+layout_mode = 0
+offset_left = 330.0
+offset_top = 47.0
+offset_right = 656.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation des volets"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets"]
+layout_mode = 0
+offset_left = 75.0
+offset_top = 204.0
+offset_right = 760.0
+offset_bottom = 375.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si luminosité extérieure"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Si"]
+layout_mode = 2
+min_value = 2000.0
+max_value = 100000.0
+step = 500.0
+value = 2000.0
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Si"]
+layout_mode = 2
+text = "lux"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    "
+
+[node name="OptionButtonSi" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/ActionSi"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "Ouvrir"
+popup/item_1/text = "Fermer"
+popup/item_1/id = 1
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "les volets"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    "
+
+[node name="OptionButtonSinon" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "Ouvrir"
+popup/item_1/text = "Fermer"
+popup/item_1/id = 1
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "les volets"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationVolets"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 506.0
+offset_right = 797.0
+offset_bottom = 537.0
+text = "Programmation active"
+
+[node name="PanneauProgrammationPot1" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("9_48daj")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 47.0
+offset_right = 779.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de l'arrosage automatique"
+
+[node name="SousTitre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 122.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Pot 1"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si humidité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Si"]
+layout_mode = 2
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Si"]
+layout_mode = 2
+text = "%"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Arroser le pot jusqu'à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/ActionSi"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "%"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Arroser le pot jusqu'à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "%"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot1"]
+layout_mode = 0
+offset_left = 537.0
+offset_top = 511.0
+offset_right = 758.0
+offset_bottom = 542.0
+text = "Programmation active"
+
+[node name="PanneauProgrammationPot2" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("9_48daj")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 47.0
+offset_right = 779.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de l'arrosage automatique"
+
+[node name="SousTitre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 122.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Pot 2"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2"]
+layout_mode = 0
+offset_left = 570.0
+offset_top = 509.0
+offset_right = 791.0
+offset_bottom = 540.0
+text = "Programmation active"
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si humidité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Si"]
+layout_mode = 2
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Si"]
+layout_mode = 2
+text = "%"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/ActionSi"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "%"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot2/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "%"
+
+[node name="PanneauProgrammationPot3" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("9_48daj")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 47.0
+offset_right = 779.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de l'arrosage automatique"
+
+[node name="SousTitre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 122.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Pot 3"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si humidité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Si"]
+layout_mode = 2
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Si"]
+layout_mode = 2
+text = "%"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/ActionSi"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "%"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "%"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot3"]
+layout_mode = 0
+offset_left = 575.0
+offset_top = 508.0
+offset_right = 796.0
+offset_bottom = 539.0
+text = "Programmation active"
+
+[node name="PanneauProgrammationPot4" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("9_48daj")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 47.0
+offset_right = 779.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de l'arrosage automatique"
+
+[node name="SousTitre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 122.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Pot 4"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si humidité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Si"]
+layout_mode = 2
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Si"]
+layout_mode = 2
+text = "%"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/ActionSi"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "%"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "%"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot4"]
+layout_mode = 0
+offset_left = 597.0
+offset_top = 509.0
+offset_right = 818.0
+offset_bottom = 540.0
+text = "Programmation active"
+
+[node name="PanneauProgrammationPot5" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("9_48daj")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 47.0
+offset_right = 779.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de l'arrosage automatique"
+
+[node name="SousTitre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 122.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Pot 5"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si humidité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Si"]
+layout_mode = 2
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Si"]
+layout_mode = 2
+text = "%"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/ActionSi"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "%"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "%"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot5"]
+layout_mode = 0
+offset_left = 576.0
+offset_top = 512.0
+offset_right = 797.0
+offset_bottom = 543.0
+text = "Programmation active"
+
+[node name="PanneauProgrammationPot6" type="Panel" parent="ControlPanneauxSecondaires"]
+visible = false
+layout_mode = 0
+offset_left = 70.0
+offset_top = 19.0
+offset_right = 1081.0
+offset_bottom = 617.0
+theme_override_styles/panel = SubResource("StyleBoxTexture_iv4b8")
+script = ExtResource("9_48daj")
+
+[node name="Titre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6"]
+layout_mode = 0
+offset_left = 263.0
+offset_top = 47.0
+offset_right = 779.0
+offset_bottom = 89.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Programmation de l'arrosage automatique"
+
+[node name="SousTitre" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6"]
+layout_mode = 0
+offset_left = 57.0
+offset_top = 49.0
+offset_right = 122.0
+offset_bottom = 91.0
+theme_override_colors/font_color = Color(0.341176, 0.423529, 0.466667, 1)
+theme_override_font_sizes/font_size = 25
+text = "Pot 6"
+
+[node name="Valider" type="Button" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6"]
+layout_mode = 0
+offset_left = 819.0
+offset_top = 487.0
+offset_right = 959.0
+offset_bottom = 556.0
+text = "Valider"
+script = ExtResource("4_tku7c")
+
+[node name="ContainerBlocs" type="VBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6"]
+layout_mode = 0
+offset_left = 161.0
+offset_top = 195.0
+offset_right = 521.0
+offset_bottom = 358.0
+scale = Vector2(1.4, 1.4)
+
+[node name="Repeter" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "Répéter"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Repeter"]
+layout_mode = 2
+max_value = 30.0
+value = 3.0
+editable = false
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Repeter"]
+layout_mode = 2
+text = "fois par jour"
+
+[node name="Si" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Si"]
+layout_mode = 2
+text = "          Si humidité"
+
+[node name="OptionButton2" type="OptionButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Si"]
+layout_mode = 2
+disabled = true
+item_count = 2
+popup/item_0/text = "inférieur"
+popup/item_1/text = "supérieur"
+popup/item_1/id = 1
+
+[node name="Label2" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Si"]
+layout_mode = 2
+text = "à"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Si"]
+layout_mode = 2
+alignment = 3
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Si"]
+layout_mode = 2
+text = "%"
+
+[node name="ActionSi" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/ActionSi"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/ActionSi"]
+layout_mode = 2
+text = "%"
+
+[node name="Sinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/Sinon"]
+layout_mode = 2
+text = "          Sinon"
+
+[node name="ActionSinon" type="HBoxContainer" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs"]
+layout_mode = 2
+
+[node name="Label4" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "                    Arroser le pot de"
+
+[node name="SpinBox" type="SpinBox" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+editable = false
+
+[node name="Label3" type="Label" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6/ContainerBlocs/ActionSinon"]
+layout_mode = 2
+text = "%"
+
+[node name="CheckButton" type="CheckButton" parent="ControlPanneauxSecondaires/PanneauProgrammationPot6"]
+layout_mode = 0
+offset_left = 579.0
+offset_top = 526.0
+offset_right = 800.0
+offset_bottom = 557.0
+text = "Programmation active"
+
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer/ProgrammationLampes" to="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer/ProgrammationLampes" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer/ProgrammationVolets" to="ControlPanneauPrincipal/PanneauPrincipal/VBoxContainer/ProgrammationVolets" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot3" to="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot3" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot6" to="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot6" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot2" to="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot2" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot5" to="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot5" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot1" to="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot1" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot4" to="ControlPanneauPrincipal/PanneauPrincipal/GrillePots/ProgrammationPot4" method="OnButtonPressed"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationLampes/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationLampes/Valider" method="OnButtonPressed"]
+[connection signal="item_selected" from="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi/OptionButtonSi" to="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSi/OptionButtonSi" method="OnItemSelected"]
+[connection signal="item_selected" from="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon/OptionButtonSinon" to="ControlPanneauxSecondaires/PanneauProgrammationLampes/ContainerBlocs/ActionSinon/OptionButtonSinon" method="OnItemSelected"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationLampes/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationLampes" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationVolets/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationVolets/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationVolets/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationVolets" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationPot1/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationPot1/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationPot1/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationPot1" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationPot2/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationPot2/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationPot2/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationPot2" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationPot3/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationPot3/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationPot3/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationPot3" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationPot4/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationPot4/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationPot4/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationPot4" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationPot5/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationPot5/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationPot5/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationPot5" method="OnCheckButtonToggle"]
+[connection signal="pressed" from="ControlPanneauxSecondaires/PanneauProgrammationPot6/Valider" to="ControlPanneauxSecondaires/PanneauProgrammationPot6/Valider" method="OnButtonPressed"]
+[connection signal="toggled" from="ControlPanneauxSecondaires/PanneauProgrammationPot6/CheckButton" to="ControlPanneauxSecondaires/PanneauProgrammationPot6" method="OnCheckButtonToggle"]

@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy1or7w0nhmee"]
+
+[ext_resource type="Script" path="res://Scripts/DragAndDrop/Sensors.cs" id="1_r2nhm"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kpitu"]
+
+[node name="Node2D" type="Node2D"]
+scale = Vector2(2.5, 2.5)
+script = ExtResource("1_r2nhm")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("RectangleShape2D_kpitu")
+debug_color = Color(0.859447, 0.35251, 0.233214, 0.42)
+
+[connection signal="body_entered" from="Area2D" to="." method="OnBodyEntered"]
+[connection signal="body_exited" from="Area2D" to="." method="OnBodyExited"]
+[connection signal="mouse_entered" from="Area2D" to="." method="OnMouseEntered"]
+[connection signal="mouse_exited" from="Area2D" to="." method="OnMouseExited"]

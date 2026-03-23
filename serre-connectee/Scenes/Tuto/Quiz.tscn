@@ -1,0 +1,396 @@
+[gd_scene load_steps=34 format=3 uid="uid://d12o06vhjiy8f"]
+
+[ext_resource type="Script" path="res://Scripts/Tuto/Quiz.cs" id="1_tmqyo"]
+[ext_resource type="Texture2D" uid="uid://dbxjlabcfs27o" path="res://Assets/Images/ImagesMeteo/FondClair.png" id="2_ug8ws"]
+[ext_resource type="Texture2D" uid="uid://jiotm2milo2p" path="res://Assets/Images/FondMoyen.png" id="3_ty1lh"]
+[ext_resource type="Texture2D" uid="uid://cb2sm8ot365gx" path="res://Assets/Images/FondFonce.png" id="4_5rpst"]
+[ext_resource type="Texture2D" uid="uid://b72iy1munfsd5" path="res://Assets/Images/ImagesPopup/FondTimer.png" id="5_o6kc6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6oegd"]
+texture = ExtResource("2_ug8ws")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0dje6"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ybfkw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ovyld"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_igo3n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jsm2j"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w42aj"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8q3lq"]
+texture = ExtResource("3_ty1lh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w2616"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_yi4yq"]
+texture = ExtResource("4_5rpst")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_48msm"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ta7d"]
+texture = ExtResource("3_ty1lh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cle76"]
+texture = ExtResource("3_ty1lh")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_a5vv8"]
+texture = ExtResource("5_o6kc6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_24b2x"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tpd45"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_fpknw"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_s3lxu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vgsxl"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_2e4e5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_afybk"]
+texture = ExtResource("3_ty1lh")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdqjr"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_bh5d4"]
+texture = ExtResource("4_5rpst")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_55tw0"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eopds"]
+texture = ExtResource("3_ty1lh")
+
+[sub_resource type="Animation" id="Animation_t3c1v"]
+resource_name = "BLUR"
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Popup/Panel:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Popup/Panel:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Popup/Panel:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Popup/Panel:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0, 1)
+}
+
+[sub_resource type="Animation" id="Animation_wep7m"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Popup/Panel:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Popup/Panel:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Popup/Panel:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Popup/Panel:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_kuuke"]
+_data = {
+"BLUR": SubResource("Animation_t3c1v"),
+"RESET": SubResource("Animation_wep7m")
+}
+
+[node name="Control2" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tmqyo")
+
+[node name="Popup" type="Popup" parent="."]
+transparent_bg = true
+size = Vector2i(1155, 650)
+visible = true
+
+[node name="Panel" type="Panel" parent="Popup"]
+modulate = Color(1, 1, 1, 0)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_6oegd")
+
+[node name="Question" type="Label" parent="Popup/Panel"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -500.0
+offset_top = 30.0
+offset_right = 300.0
+offset_bottom = 53.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "La question se trouve ici !"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="Explanation" type="Label" parent="Popup/Panel"]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -500.0
+offset_top = -11.5
+offset_right = 300.0
+offset_bottom = 11.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "L'explication se trouve ici !"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 3
+
+[node name="GridContainer" type="GridContainer" parent="Popup/Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 100.0
+offset_right = 884.0
+offset_bottom = 504.0
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 10
+columns = 2
+
+[node name="Choice1" type="Button" parent="Popup/Panel/GridContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0dje6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ybfkw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ovyld")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_igo3n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jsm2j")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_w42aj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8q3lq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_w2616")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yi4yq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_48msm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ta7d")
+text = "Choice 1"
+
+[node name="Choice2" type="Button" parent="Popup/Panel/GridContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0dje6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ybfkw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ovyld")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_igo3n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jsm2j")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_w42aj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8q3lq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_w2616")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yi4yq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_48msm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ta7d")
+text = "Choice 2"
+
+[node name="Choice3" type="Button" parent="Popup/Panel/GridContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0dje6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ybfkw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ovyld")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_igo3n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jsm2j")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_w42aj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8q3lq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_w2616")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yi4yq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_48msm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ta7d")
+text = "Choice 3"
+
+[node name="Choice4" type="Button" parent="Popup/Panel/GridContainer"]
+custom_minimum_size = Vector2(400, 200)
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_0dje6")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_ybfkw")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_ovyld")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_igo3n")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_jsm2j")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_w42aj")
+theme_override_styles/hover = SubResource("StyleBoxTexture_8q3lq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_w2616")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_yi4yq")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_48msm")
+theme_override_styles/normal = SubResource("StyleBoxTexture_3ta7d")
+text = "Choice 4"
+
+[node name="ProgressBar" type="ProgressBar" parent="Popup/Panel"]
+layout_mode = 1
+anchors_preset = 6
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -150.0
+offset_top = -275.0
+offset_right = -50.0
+offset_bottom = 275.0
+grow_horizontal = 0
+grow_vertical = 2
+theme_override_styles/background = SubResource("StyleBoxTexture_cle76")
+theme_override_styles/fill = SubResource("StyleBoxTexture_a5vv8")
+value = 100.0
+fill_mode = 3
+show_percentage = false
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Popup/Panel"]
+layout_mode = 0
+offset_left = 80.0
+offset_top = 550.0
+offset_right = 220.0
+offset_bottom = 590.0
+theme_override_constants/separation = 50
+
+[node name="TTS" type="Button" parent="Popup/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_24b2x")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpd45")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fpknw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_s3lxu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vgsxl")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_2e4e5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_afybk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rdqjr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bh5d4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_55tw0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eopds")
+text = "TTS"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Hint" type="Button" parent="Popup/Panel/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxEmpty_24b2x")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_tpd45")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_fpknw")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_s3lxu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vgsxl")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_2e4e5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_afybk")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_rdqjr")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_bh5d4")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_55tw0")
+theme_override_styles/normal = SubResource("StyleBoxTexture_eopds")
+text = "Voir indice"
+icon_alignment = 1
+expand_icon = true
+
+[node name="Timer" type="Timer" parent="Popup"]
+one_shot = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_kuuke")
+}
+
+[connection signal="pressed" from="Popup/Panel/GridContainer/Choice1" to="." method="OnChoicePressed" binds= [1]]
+[connection signal="pressed" from="Popup/Panel/GridContainer/Choice2" to="." method="OnChoicePressed" binds= [2]]
+[connection signal="pressed" from="Popup/Panel/GridContainer/Choice3" to="." method="OnChoicePressed" binds= [3]]
+[connection signal="pressed" from="Popup/Panel/GridContainer/Choice4" to="." method="OnChoicePressed" binds= [4]]
+[connection signal="pressed" from="Popup/Panel/HBoxContainer/TTS" to="." method="OnBottomButtonsPressed" binds= ["TTS"]]
+[connection signal="pressed" from="Popup/Panel/HBoxContainer/Hint" to="." method="OnBottomButtonsPressed" binds= ["Hint"]]
+[connection signal="timeout" from="Popup/Timer" to="." method="Timeout"]

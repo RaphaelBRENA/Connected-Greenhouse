@@ -1,0 +1,70 @@
+[gd_scene load_steps=11 format=3 uid="uid://ce8ate0im3ali"]
+
+[ext_resource type="Script" path="res://Scripts/Tuto/Popup.cs" id="1_l28nw"]
+[ext_resource type="Texture2D" uid="uid://dbxjlabcfs27o" path="res://Assets/Images/ImagesMeteo/FondClair.png" id="2_3r4eu"]
+[ext_resource type="Texture2D" uid="uid://jqehq0rv072f" path="res://Assets/Images/MiniCroixVerte.png" id="2_u0u0h"]
+[ext_resource type="Texture2D" uid="uid://cjt2g4i8vx2im" path="res://Assets/Images/MiniCroixViolette.png" id="3_tp0b2"]
+[ext_resource type="Texture2D" uid="uid://jiotm2milo2p" path="res://Assets/Images/FondMoyen.png" id="4_h8jlr"]
+[ext_resource type="FontFile" uid="uid://b75athrhv71os" path="res://Assets/Fonts/AfacadFlux-VariableFont_slnt,wght.ttf" id="6_uq2v6"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_y6hcl"]
+texture = ExtResource("4_h8jlr")
+expand_margin_left = 20.0
+expand_margin_top = 40.0
+expand_margin_right = 20.0
+expand_margin_bottom = 20.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_i2w2r"]
+content_margin_left = 4.0
+content_margin_top = 4.0
+content_margin_right = 4.0
+content_margin_bottom = 4.0
+bg_color = Color(0.1, 0.1, 0.1, 0.6)
+corner_radius_top_left = 3
+corner_radius_top_right = 3
+corner_radius_bottom_right = 3
+corner_radius_bottom_left = 3
+corner_detail = 5
+
+[sub_resource type="Theme" id="Theme_wbpn1"]
+PopupPanel/colors/title_color = Color(0.376471, 0.329412, 0.258824, 1)
+PopupPanel/icons/close = ExtResource("2_u0u0h")
+PopupPanel/icons/close_pressed = ExtResource("3_tp0b2")
+PopupPanel/styles/embedded_border = SubResource("StyleBoxTexture_y6hcl")
+PopupPanel/styles/panel = SubResource("StyleBoxFlat_i2w2r")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jbh4r"]
+texture = ExtResource("2_3r4eu")
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_l28nw")
+
+[node name="Popup" type="PopupPanel" parent="."]
+transparent_bg = true
+title = "Tutoriel"
+initial_position = 2
+size = Vector2i(400, 130)
+visible = true
+borderless = false
+transparent = true
+theme = SubResource("Theme_wbpn1")
+theme_override_styles/panel = SubResource("StyleBoxTexture_jbh4r")
+
+[node name="Label" type="Label" parent="Popup"]
+modulate = Color(0, 0, 0, 1)
+offset_right = 400.0
+offset_bottom = 130.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("6_uq2v6")
+text = "Voici le tutoriel"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[connection signal="popup_hide" from="Popup" to="." method="OnPopupHide"]

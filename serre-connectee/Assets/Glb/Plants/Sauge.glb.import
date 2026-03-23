@@ -1,0 +1,129 @@
+[remap]
+
+importer="scene"
+importer_version=1
+type="PackedScene"
+uid="uid://d0na0ke41ihy8"
+path="res://.godot/imported/Sauge.glb-81d7170ff7ac038442dc25c9e89b0171.scn"
+
+[deps]
+
+source_file="res://Assets/Glb/Plants/Sauge.glb"
+dest_files=["res://.godot/imported/Sauge.glb-81d7170ff7ac038442dc25c9e89b0171.scn"]
+
+[params]
+
+nodes/root_type=""
+nodes/root_name=""
+nodes/apply_root_scale=true
+nodes/root_scale=1.0
+nodes/import_as_skeleton_bones=false
+meshes/ensure_tangents=true
+meshes/generate_lods=true
+meshes/create_shadow_meshes=true
+meshes/light_baking=1
+meshes/lightmap_texel_size=0.2
+meshes/force_disable_compression=false
+skins/use_named_skins=true
+animation/import=true
+animation/fps=30
+animation/trimming=false
+animation/remove_immutable_tracks=true
+animation/import_rest_as_RESET=false
+import_script/path=""
+_subresources={
+"meshes": {
+"Sauge_BézierCurve": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade1.res"
+},
+"Sauge_BézierCurve_001": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade2.res"
+},
+"Sauge_BézierCurve_002": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade3.res"
+},
+"Sauge_BézierCurve_003": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade4.res"
+},
+"Sauge_BézierCurve_004": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeRecoltable.res"
+},
+"Sauge_BézierCurve_005": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade1Morte.res"
+},
+"Sauge_BézierCurve_006": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade2Morte.res"
+},
+"Sauge_BézierCurve_007": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade3Morte.res"
+},
+"Sauge_BézierCurve_008": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeStade4Morte.res"
+},
+"Sauge_BézierCurve_009": {
+"generate/lightmap_uv": 0,
+"generate/lods": 0,
+"generate/shadow_meshes": 0,
+"lods/normal_merge_angle": 60.0,
+"lods/normal_split_angle": 25.0,
+"save_to_file/enabled": true,
+"save_to_file/path": "res://Assets/Models/Plants/SaugeRecoltableMorte.res"
+}
+}
+}
+gltf/naming_version=1
+gltf/embedded_image_handling=1

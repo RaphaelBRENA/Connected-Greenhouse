@@ -1,0 +1,531 @@
+[gd_scene load_steps=56 format=3 uid="uid://ddov3an1jqa2h"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/OptionsMenu.cs" id="1_o6s3x"]
+[ext_resource type="Texture2D" uid="uid://d4c2rstxuxib2" path="res://Assets/Images/FondPlein.png" id="2_ep2oo"]
+[ext_resource type="Texture2D" uid="uid://dbxjlabcfs27o" path="res://Assets/Images/ImagesMeteo/FondClair.png" id="3_pg6st"]
+[ext_resource type="Texture2D" uid="uid://cd5jprak5gnxc" path="res://Assets/Images/FondCase.png" id="4_fhp3f"]
+[ext_resource type="Texture2D" uid="uid://c6p4cqqaauaht" path="res://Assets/Images/FondCasePressed.png" id="4_x01mo"]
+[ext_resource type="Theme" uid="uid://bea3qkbtpxsxx" path="res://Themes/OptionButton.tres" id="5_da0od"]
+[ext_resource type="Texture2D" uid="uid://cwxfs7as0y0rp" path="res://Assets/Images/EtiquetteDemiFleurBleu.png" id="5_ee256"]
+[ext_resource type="Texture2D" uid="uid://be6u5qehx488k" path="res://Assets/Images/MiniFleurPourpre.png" id="5_yt6yv"]
+[ext_resource type="Texture2D" uid="uid://def6rp5f3j0ww" path="res://Assets/Images/MiniFleurBleue.png" id="6_120gh"]
+[ext_resource type="Texture2D" uid="uid://jiotm2milo2p" path="res://Assets/Images/FondMoyen.png" id="8_cndj0"]
+[ext_resource type="Texture2D" uid="uid://cb2sm8ot365gx" path="res://Assets/Images/FondFonce.png" id="10_ig8fo"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kdok8"]
+texture = ExtResource("3_pg6st")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3rqi8"]
+texture = ExtResource("4_fhp3f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_77e8l"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_v2wlu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_j3eph"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vym2i"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l2pt8"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_h427p"]
+texture = ExtResource("4_fhp3f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ov6e"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0tjii"]
+texture = ExtResource("4_x01mo")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_03wae"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_216hw"]
+texture = ExtResource("4_x01mo")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_5c1bp"]
+texture = ExtResource("4_fhp3f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wmecq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qlre4"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_h7y0a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k0rc5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ijybb"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_n7kbn"]
+texture = ExtResource("4_fhp3f")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1w86r"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mt2em"]
+texture = ExtResource("4_x01mo")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_vrvq1"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_e6wx4"]
+texture = ExtResource("4_x01mo")
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hhugw"]
+bg_color = Color(0.700324, 0.636974, 0.542685, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x8pyg"]
+texture = ExtResource("8_cndj0")
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_7jmyn"]
+color = Color(0.573947, 0.511991, 0.419388, 1)
+thickness = 10
+
+[sub_resource type="Theme" id="Theme_wuoyk"]
+HSlider/icons/grabber = ExtResource("5_yt6yv")
+HSlider/icons/grabber_disabled = ExtResource("5_yt6yv")
+HSlider/icons/grabber_highlight = ExtResource("6_120gh")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_hhugw")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_x8pyg")
+HSlider/styles/slider = SubResource("StyleBoxLine_7jmyn")
+
+[sub_resource type="Theme" id="Theme_sd0ba"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3ywf7"]
+texture = ExtResource("5_ee256")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_mrwgk"]
+texture = ExtResource("5_ee256")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_clb8v"]
+texture = ExtResource("5_ee256")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_sel06"]
+texture = ExtResource("5_ee256")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g1ujd"]
+texture = ExtResource("5_ee256")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ley0k"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c2uir"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_8xeon"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_undl1"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ijsie"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chebx"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j5ovq"]
+texture = ExtResource("10_ig8fo")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_tjieu"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8vpgr"]
+texture = ExtResource("10_ig8fo")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+modulate_color = Color(0.86, 0.86, 0.86, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dt48h"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_58g15"]
+texture = ExtResource("10_ig8fo")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+
+[node name="OptionsMenu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o6s3x")
+
+[node name="Fond" type="Sprite2D" parent="."]
+position = Vector2(576.75, 322.25)
+scale = Vector2(0.599219, 0.603241)
+texture = ExtResource("2_ep2oo")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -306.0
+offset_top = -231.0
+offset_right = 326.0
+offset_bottom = 230.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_kdok8")
+
+[node name="Général" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 18.0
+offset_top = -31.0
+offset_right = 97.0
+offset_bottom = 3.0
+theme_override_colors/font_disabled_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_outline_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxTexture_3rqi8")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_77e8l")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_v2wlu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_j3eph")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_vym2i")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_l2pt8")
+theme_override_styles/hover = SubResource("StyleBoxTexture_h427p")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_0ov6e")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_0tjii")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_03wae")
+theme_override_styles/normal = SubResource("StyleBoxTexture_216hw")
+text = "Général"
+
+[node name="Touches" type="Button" parent="Panel"]
+layout_mode = 0
+offset_left = 110.0
+offset_top = -31.0
+offset_right = 310.0
+offset_bottom = 2.0
+theme_override_colors/font_disabled_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_outline_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/focus = SubResource("StyleBoxTexture_5c1bp")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_wmecq")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_qlre4")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_h7y0a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_k0rc5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_ijybb")
+theme_override_styles/hover = SubResource("StyleBoxTexture_n7kbn")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_1w86r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_mt2em")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_vrvq1")
+theme_override_styles/normal = SubResource("StyleBoxTexture_e6wx4")
+text = "Association des touches"
+
+[node name="PartieGeneral" type="VBoxContainer" parent="Panel"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -168.0
+offset_top = -139.5
+offset_right = 179.0
+offset_bottom = 119.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 5
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Panel/PartieGeneral"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieGeneral/VBoxContainer"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PartieGeneral/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Volume principal"
+
+[node name="Label2" type="Label" parent="Panel/PartieGeneral/VBoxContainer/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+horizontal_alignment = 2
+
+[node name="VolumePrincipal" type="HSlider" parent="Panel/PartieGeneral/VBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_wuoyk")
+value = 100.0
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/PartieGeneral"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieGeneral/VBoxContainer2"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PartieGeneral/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Musique"
+
+[node name="Label2" type="Label" parent="Panel/PartieGeneral/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+horizontal_alignment = 2
+
+[node name="Musique" type="HSlider" parent="Panel/PartieGeneral/VBoxContainer2"]
+layout_mode = 2
+theme = SubResource("Theme_wuoyk")
+value = 100.0
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/PartieGeneral"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieGeneral/VBoxContainer3"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PartieGeneral/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Bruits"
+
+[node name="Label2" type="Label" parent="Panel/PartieGeneral/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+horizontal_alignment = 2
+
+[node name="Bruits" type="HSlider" parent="Panel/PartieGeneral/VBoxContainer3"]
+layout_mode = 2
+theme = SubResource("Theme_wuoyk")
+value = 100.0
+
+[node name="VBoxContainer4" type="VBoxContainer" parent="Panel/PartieGeneral"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieGeneral/VBoxContainer4"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PartieGeneral/VBoxContainer4/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Plein écran"
+
+[node name="CheckButton" type="CheckButton" parent="Panel/PartieGeneral/VBoxContainer4/HBoxContainer"]
+layout_mode = 2
+theme = SubResource("Theme_sd0ba")
+
+[node name="VBoxContainer5" type="VBoxContainer" parent="Panel/PartieGeneral"]
+layout_mode = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieGeneral/VBoxContainer5"]
+layout_mode = 2
+
+[node name="Label" type="Label" parent="Panel/PartieGeneral/VBoxContainer5/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Résolution"
+
+[node name="OptionButton" type="OptionButton" parent="Panel/PartieGeneral/VBoxContainer5/HBoxContainer"]
+custom_minimum_size = Vector2(250, 80)
+layout_mode = 2
+theme = ExtResource("5_da0od")
+theme_override_colors/font_disabled_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_outline_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_constants/h_separation = 50
+theme_override_styles/focus = SubResource("StyleBoxTexture_3ywf7")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_mrwgk")
+theme_override_styles/hover = SubResource("StyleBoxTexture_clb8v")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_sel06")
+theme_override_styles/normal = SubResource("StyleBoxTexture_g1ujd")
+theme_override_constants/arrow_margin = 28
+alignment = 2
+item_count = 4
+popup/item_0/text = "1280 x 720"
+popup/item_1/text = "1600 x 900"
+popup/item_1/id = 1
+popup/item_2/text = "1920 x 1080"
+popup/item_2/id = 2
+popup/item_3/text = "2560 x 1440"
+popup/item_3/id = 3
+
+[node name="PartieTouches" type="HBoxContainer" parent="Panel"]
+visible = false
+layout_mode = 2
+offset_left = 32.0
+offset_top = 110.0
+offset_right = 593.0
+offset_bottom = 246.0
+theme_override_constants/separation = 25
+alignment = 1
+
+[node name="VBoxContainer2" type="VBoxContainer" parent="Panel/PartieTouches"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieTouches/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Haut"
+
+[node name="Haut" type="Button" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer" groups=["buttons"]]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ley0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c2uir")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xeon")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_undl1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ijsie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_chebx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5ovq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tjieu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vpgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dt48h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_58g15")
+text = "Z"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/PartieTouches/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Bas"
+
+[node name="Bas" type="Button" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer2" groups=["buttons"]]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ley0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c2uir")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xeon")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_undl1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ijsie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_chebx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5ovq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tjieu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vpgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dt48h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_58g15")
+text = "S"
+
+[node name="HBoxContainer3" type="HBoxContainer" parent="Panel/PartieTouches/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer3"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Gauche"
+
+[node name="Gauche" type="Button" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer3" groups=["buttons"]]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ley0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c2uir")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xeon")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_undl1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ijsie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_chebx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5ovq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tjieu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vpgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dt48h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_58g15")
+text = "Q"
+
+[node name="HBoxContainer4" type="HBoxContainer" parent="Panel/PartieTouches/VBoxContainer2"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer4"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Droite"
+
+[node name="Droite" type="Button" parent="Panel/PartieTouches/VBoxContainer2/HBoxContainer4" groups=["buttons"]]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ley0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c2uir")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xeon")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_undl1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ijsie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_chebx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5ovq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tjieu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vpgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dt48h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_58g15")
+text = "D"
+
+[node name="VBoxContainer3" type="VBoxContainer" parent="Panel/PartieTouches"]
+layout_mode = 2
+theme_override_constants/separation = 20
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Panel/PartieTouches/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/PartieTouches/VBoxContainer3/HBoxContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Interagir"
+
+[node name="Interagir" type="Button" parent="Panel/PartieTouches/VBoxContainer3/HBoxContainer" groups=["buttons"]]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ley0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c2uir")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xeon")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_undl1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ijsie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_chebx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5ovq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tjieu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vpgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dt48h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_58g15")
+text = "F"
+
+[node name="HBoxContainer2" type="HBoxContainer" parent="Panel/PartieTouches/VBoxContainer3"]
+layout_mode = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="Label" parent="Panel/PartieTouches/VBoxContainer3/HBoxContainer2"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+text = "Inventaire"
+
+[node name="Inventaire" type="Button" parent="Panel/PartieTouches/VBoxContainer3/HBoxContainer2" groups=["buttons"]]
+layout_mode = 2
+theme_override_styles/focus = SubResource("StyleBoxEmpty_ley0k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_c2uir")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_8xeon")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_undl1")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ijsie")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_chebx")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j5ovq")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_tjieu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_8vpgr")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_dt48h")
+theme_override_styles/normal = SubResource("StyleBoxTexture_58g15")
+text = "Tab"
+
+[connection signal="pressed" from="Panel/Général" to="." method="OnGeneralPressed"]
+[connection signal="pressed" from="Panel/Touches" to="." method="OnKeyboardKeyPressed"]
+[connection signal="value_changed" from="Panel/PartieGeneral/VBoxContainer/VolumePrincipal" to="." method="_on_volume_principal_value_changed"]
+[connection signal="value_changed" from="Panel/PartieGeneral/VBoxContainer2/Musique" to="." method="_on_musique_value_changed"]
+[connection signal="value_changed" from="Panel/PartieGeneral/VBoxContainer3/Bruits" to="." method="_on_bruits_value_changed"]
+[connection signal="toggled" from="Panel/PartieGeneral/VBoxContainer4/HBoxContainer/CheckButton" to="." method="OnFullScreenToggle"]
+[connection signal="item_selected" from="Panel/PartieGeneral/VBoxContainer5/HBoxContainer/OptionButton" to="." method="OnResolutionPressed"]

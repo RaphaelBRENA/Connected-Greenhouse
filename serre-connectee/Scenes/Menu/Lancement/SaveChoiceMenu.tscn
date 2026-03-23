@@ -1,0 +1,438 @@
+[gd_scene load_steps=40 format=3 uid="uid://b272iyru3bebl"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/SaveChoiceMenu.cs" id="1_5iqmf"]
+[ext_resource type="FontFile" uid="uid://b75athrhv71os" path="res://Assets/Fonts/AfacadFlux-VariableFont_slnt,wght.ttf" id="2_lf8oe"]
+[ext_resource type="Texture2D" uid="uid://dovuw5apmdh04" path="res://Assets/Images/ImagesPots/StartingBackground.png" id="2_oxac3"]
+[ext_resource type="Texture2D" uid="uid://cxry5txgctm08" path="res://Assets/Images/EtiquetteFleurPourpre.png" id="4_j2cav"]
+[ext_resource type="Texture2D" uid="uid://uw8xsi1ofjx5" path="res://Assets/Images/EtiquetteBiaisViolette.png" id="5_508p5"]
+[ext_resource type="Texture2D" uid="uid://dajrgvvppmmak" path="res://Assets/Images/EtiquetteBiaisBleue.png" id="5_tuba6"]
+[ext_resource type="Texture2D" uid="uid://b62i264by2ar7" path="res://Assets/Images/EtiquetteBiaisPourpre.png" id="6_nxo6x"]
+[ext_resource type="Texture2D" uid="uid://k7o28gqs2fdw" path="res://Assets/Images/PoubelleOuverte.png" id="8_5is35"]
+[ext_resource type="Texture2D" uid="uid://ch0xevxsvh711" path="res://Assets/Images/PoubelleFermee.png" id="9_ajn51"]
+[ext_resource type="Texture2D" uid="uid://jiotm2milo2p" path="res://Assets/Images/FondMoyen.png" id="10_gikul"]
+[ext_resource type="Texture2D" uid="uid://cew0umm8didiq" path="res://Assets/Images/CroixViolette.png" id="11_k501d"]
+[ext_resource type="Texture2D" uid="uid://c6y7rldll3wk4" path="res://Assets/Images/Etiquette.png" id="12_4mmqi"]
+[ext_resource type="Texture2D" uid="uid://da28eqo2jkcnl" path="res://Assets/Images/CroixVerte.png" id="12_tl37i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_st2ty"]
+texture = ExtResource("2_oxac3")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_eccau"]
+texture = ExtResource("4_j2cav")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_io1lh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_f7ojf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_l7w2g"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5uc5a"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ivqb5"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_bimdq"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7a6ir"]
+content_margin_left = 0.0
+content_margin_top = 20.0
+content_margin_right = 60.0
+content_margin_bottom = 20.0
+texture = ExtResource("5_508p5")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5ib3k"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b5qla"]
+content_margin_left = 0.0
+content_margin_top = 20.0
+content_margin_right = 60.0
+content_margin_bottom = 20.0
+texture = ExtResource("5_tuba6")
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_wdu55"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_b4hs2"]
+content_margin_left = 0.0
+content_margin_top = 20.0
+content_margin_right = 60.0
+content_margin_bottom = 20.0
+texture = ExtResource("6_nxo6x")
+region_rect = Rect2(0, 2, 800, 295)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_i8vcq"]
+texture = ExtResource("8_5is35")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_8op54"]
+texture = ExtResource("9_ajn51")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_g6u43"]
+texture = ExtResource("8_5is35")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vye4x"]
+texture = ExtResource("9_ajn51")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_aitbb"]
+texture = ExtResource("8_5is35")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6u10k"]
+texture = ExtResource("9_ajn51")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_3iyfu"]
+texture = ExtResource("10_gikul")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wo6ro"]
+texture = ExtResource("11_k501d")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ixlwc"]
+texture = ExtResource("12_tl37i")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ldt72"]
+texture = ExtResource("12_tl37i")
+modulate_color = Color(0.99, 0.99, 0.99, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_e48uk"]
+bg_color = Color(0.598803, 0.3234, 0.77, 0.815686)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_wq1ty"]
+texture = ExtResource("12_4mmqi")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1mndd"]
+texture = ExtResource("12_4mmqi")
+
+[node name="SaveChoiceMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5iqmf")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_bottom = 5.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1, 0.992152)
+theme_override_styles/panel = SubResource("StyleBoxTexture_st2ty")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 291.0
+offset_top = 36.0
+offset_right = 838.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/normal = SubResource("StyleBoxTexture_eccau")
+text = "Save Logs"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="Colonne1" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -559.0
+offset_top = -135.0
+offset_right = -18.0
+offset_bottom = 275.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+
+[node name="Save 1" type="Button" parent="Colonne1"]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/focus = SubResource("StyleBoxEmpty_io1lh")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_f7ojf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l7w2g")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5uc5a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ivqb5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bimdq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7a6ir")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5ib3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b5qla")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wdu55")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b4hs2")
+alignment = 2
+
+[node name="Label" type="Label" parent="Colonne1/Save 1"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 64.0
+offset_right = 334.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 18
+
+[node name="Label2" type="Label" parent="Colonne1/Save 1"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 37.0
+offset_right = 326.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 18
+
+[node name="Save 2" type="Button" parent="Colonne1"]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/focus = SubResource("StyleBoxEmpty_io1lh")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_f7ojf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l7w2g")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5uc5a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ivqb5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bimdq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7a6ir")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5ib3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b5qla")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wdu55")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b4hs2")
+alignment = 2
+
+[node name="Label" type="Label" parent="Colonne1/Save 2"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 64.0
+offset_right = 334.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 18
+
+[node name="Label2" type="Label" parent="Colonne1/Save 2"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 37.0
+offset_right = 326.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 18
+
+[node name="Save 3" type="Button" parent="Colonne1"]
+custom_minimum_size = Vector2(400, 120)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+theme_override_colors/font_disabled_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.321569, 0.486275, 0.772549, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 27
+theme_override_styles/focus = SubResource("StyleBoxEmpty_io1lh")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxEmpty_f7ojf")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_l7w2g")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxEmpty_5uc5a")
+theme_override_styles/hover_pressed = SubResource("StyleBoxEmpty_ivqb5")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxEmpty_bimdq")
+theme_override_styles/hover = SubResource("StyleBoxTexture_7a6ir")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxEmpty_5ib3k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_b5qla")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxEmpty_wdu55")
+theme_override_styles/normal = SubResource("StyleBoxTexture_b4hs2")
+alignment = 2
+
+[node name="Label" type="Label" parent="Colonne1/Save 3"]
+layout_mode = 0
+offset_left = 154.0
+offset_top = 64.0
+offset_right = 334.0
+offset_bottom = 88.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 18
+
+[node name="Label2" type="Label" parent="Colonne1/Save 3"]
+layout_mode = 0
+offset_left = 153.0
+offset_top = 37.0
+offset_right = 326.0
+offset_bottom = 69.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 18
+
+[node name="Delete 1" type="Button" parent="."]
+layout_mode = 2
+anchor_left = 0.395
+anchor_top = 0.392
+anchor_right = 0.395
+anchor_bottom = 0.392
+offset_left = -25.04
+offset_top = -34.016
+offset_right = 34.96
+offset_bottom = 25.984
+theme_override_styles/hover = SubResource("StyleBoxTexture_i8vcq")
+theme_override_styles/normal = SubResource("StyleBoxTexture_8op54")
+
+[node name="Delete 2" type="Button" parent="."]
+layout_mode = 2
+offset_left = 509.0
+offset_top = 365.0
+offset_right = 569.0
+offset_bottom = 425.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_g6u43")
+theme_override_styles/normal = SubResource("StyleBoxTexture_vye4x")
+
+[node name="Delete 3" type="Button" parent="."]
+layout_mode = 2
+offset_left = 580.0
+offset_top = 515.0
+offset_right = 640.0
+offset_bottom = 575.0
+theme_override_styles/hover = SubResource("StyleBoxTexture_aitbb")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6u10k")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.27451)
+
+[node name="Popup" type="Panel" parent="."]
+visible = false
+custom_minimum_size = Vector2(250, 180)
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -125.0
+offset_top = -90.0
+offset_right = 125.0
+offset_bottom = 90.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_3iyfu")
+
+[node name="Close" type="Button" parent="Popup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.89
+anchor_top = 0.125
+anchor_right = 0.89
+anchor_bottom = 0.125
+offset_left = -13.5
+offset_top = -12.5
+offset_right = 13.5
+offset_bottom = 13.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_hover_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_styles/hover = SubResource("StyleBoxTexture_wo6ro")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ixlwc")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ldt72")
+
+[node name="Label" type="Label" parent="Popup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.244
+anchor_top = 0.131
+anchor_right = 0.244
+anchor_bottom = 0.131
+offset_left = -45.0
+offset_top = -11.58
+offset_right = 45.0
+offset_bottom = 11.42
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 14
+text = "Confirmer"
+
+[node name="Accept" type="Button" parent="Popup"]
+layout_mode = 0
+offset_left = 133.0
+offset_top = 120.0
+offset_right = 222.0
+offset_bottom = 150.0
+theme_override_colors/font_hover_color = Color(0.945088, 0.927571, 0.901799, 1)
+theme_override_colors/font_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxFlat_e48uk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_wq1ty")
+text = "Confirmer"
+
+[node name="Denied" type="Button" parent="Popup"]
+layout_mode = 0
+offset_left = 30.0
+offset_top = 120.0
+offset_right = 114.0
+offset_bottom = 150.0
+theme_override_colors/font_hover_color = Color(0.945098, 0.929412, 0.901961, 1)
+theme_override_colors/font_pressed_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_focus_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+theme_override_font_sizes/font_size = 12
+theme_override_styles/hover = SubResource("StyleBoxFlat_e48uk")
+theme_override_styles/normal = SubResource("StyleBoxTexture_1mndd")
+text = "Cancel"
+
+[node name="Content" type="Label" parent="Popup"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.532
+anchor_top = 0.422
+anchor_right = 0.532
+anchor_bottom = 0.422
+offset_left = -112.0
+offset_top = -28.96
+offset_right = 101.0
+offset_bottom = 29.04
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_fonts/font = ExtResource("2_lf8oe")
+horizontal_alignment = 1
+autowrap_mode = 2
+
+[connection signal="pressed" from="Colonne1/Save 1" to="." method="OnSave1Pressed"]
+[connection signal="pressed" from="Colonne1/Save 2" to="." method="OnSave2Pressed"]
+[connection signal="pressed" from="Colonne1/Save 3" to="." method="OnSave3Pressed"]
+[connection signal="pressed" from="Delete 1" to="." method="OnDelete1Pressed"]
+[connection signal="pressed" from="Delete 2" to="." method="OnDelete2Pressed"]
+[connection signal="pressed" from="Delete 3" to="." method="OnDelete3Pressed"]
+[connection signal="pressed" from="Popup/Close" to="." method="OnClosePressed"]
+[connection signal="pressed" from="Popup/Accept" to="." method="OnAcceptPressed"]
+[connection signal="pressed" from="Popup/Denied" to="." method="OnClosePressed"]

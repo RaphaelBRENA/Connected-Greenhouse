@@ -1,0 +1,283 @@
+[gd_scene load_steps=42 format=3 uid="uid://df3ill5u0hy57"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/ChestMenu.cs" id="1_06whs"]
+[ext_resource type="PackedScene" uid="uid://b36pr86co2060" path="res://Scenes/Interface/Inventaire/InventaireInterface.tscn" id="2_4bapi"]
+[ext_resource type="Texture2D" uid="uid://cb2sm8ot365gx" path="res://Assets/Images/FondFonce.png" id="3_2gfyj"]
+[ext_resource type="Texture2D" uid="uid://ck7s4je4udxla" path="res://Assets/Images/BoutonDownTransparent.png" id="3_wtg40"]
+[ext_resource type="Texture2D" uid="uid://d1tyi8d8mu6a8" path="res://Assets/Images/FondMenuAbime.png" id="4_fm8cy"]
+[ext_resource type="Texture2D" uid="uid://2nmv5ryd40rq" path="res://Assets/Images/BoutonDown.png" id="4_qxwes"]
+[ext_resource type="Texture2D" uid="uid://be6u5qehx488k" path="res://Assets/Images/MiniFleurPourpre.png" id="4_rym1q"]
+[ext_resource type="Texture2D" uid="uid://dbxjlabcfs27o" path="res://Assets/Images/ImagesMeteo/FondClair.png" id="5_4c48o"]
+[ext_resource type="Texture2D" uid="uid://bcq83vwak1fat" path="res://Assets/Images/BoutonUpTransparent.png" id="5_dvdon"]
+[ext_resource type="Texture2D" uid="uid://def6rp5f3j0ww" path="res://Assets/Images/MiniFleurBleue.png" id="5_pwm4c"]
+[ext_resource type="Texture2D" uid="uid://cbcag38x6xcle" path="res://Assets/Images/BoutonUp.png" id="6_s2vt0"]
+[ext_resource type="Texture2D" uid="uid://oxubn8end2m6" path="res://Assets/Images/BoutonInferieurTransparent.png" id="7_0rte8"]
+[ext_resource type="Texture2D" uid="uid://tlwa7f6hu1ss" path="res://Assets/Images/BoutonInferieur.png" id="7_rfowu"]
+[ext_resource type="Texture2D" uid="uid://mkn4v77kuhm3" path="res://Assets/Images/ImagesMeteo/Branche.png" id="8_cu31w"]
+[ext_resource type="Texture2D" uid="uid://fntdqv4o8kxa" path="res://Assets/Images/BoutonSuperieur.png" id="8_nuwpy"]
+[ext_resource type="Texture2D" uid="uid://bnht47p3bso3j" path="res://Assets/Images/BoutonSuperieurTransparent.png" id="9_380kh"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fs5lj"]
+bg_color = Color(0.701961, 0.635294, 0.541176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pa8q3"]
+bg_color = Color(0.701961, 0.635294, 0.541176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_yejiu"]
+bg_color = Color(0.701961, 0.635294, 0.541176, 1)
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_2ltpd"]
+bg_color = Color(0.55, 0.4818, 0.3795, 1)
+
+[sub_resource type="Theme" id="Theme_vkvd7"]
+VScrollBar/icons/decrement = ExtResource("5_dvdon")
+VScrollBar/icons/decrement_highlight = ExtResource("6_s2vt0")
+VScrollBar/icons/decrement_pressed = ExtResource("6_s2vt0")
+VScrollBar/icons/increment = ExtResource("3_wtg40")
+VScrollBar/icons/increment_highlight = ExtResource("4_qxwes")
+VScrollBar/icons/increment_pressed = ExtResource("4_qxwes")
+VScrollBar/styles/grabber = SubResource("StyleBoxFlat_fs5lj")
+VScrollBar/styles/grabber_highlight = SubResource("StyleBoxFlat_pa8q3")
+VScrollBar/styles/grabber_pressed = SubResource("StyleBoxFlat_yejiu")
+VScrollBar/styles/scroll = SubResource("StyleBoxFlat_2ltpd")
+
+[sub_resource type="Theme" id="Theme_6nj0c"]
+Label/colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_itmek"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1llgg"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+modulate_color = Color(0.86, 0.86, 0.86, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pv2eg"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_4lp2d"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 3.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yc3jx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_lar1i"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c6knl"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+modulate_color = Color(1, 1, 1, 0.917647)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_l86ai"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_lapve"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+modulate_color = Color(0.83, 0.83, 0.83, 1)
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_gr2yy"]
+bg_color = Color(0.701961, 0.635294, 0.541176, 1)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_1qvt4"]
+texture = ExtResource("5_4c48o")
+
+[sub_resource type="StyleBoxLine" id="StyleBoxLine_kn1sk"]
+color = Color(0.572549, 0.513726, 0.419608, 1)
+thickness = 10
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_vd4sx"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_sm1c4"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_th0ym"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+modulate_color = Color(1, 1, 1, 0.831373)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_c4s0p"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_7xg5e"]
+texture = ExtResource("3_2gfyj")
+expand_margin_left = 5.0
+expand_margin_right = 5.0
+modulate_color = Color(0.74, 0.74, 0.74, 1)
+
+[sub_resource type="Theme" id="Theme_ui1y6"]
+Button/styles/disabled = SubResource("StyleBoxEmpty_yc3jx")
+Button/styles/focus = SubResource("StyleBoxEmpty_lar1i")
+Button/styles/hover = SubResource("StyleBoxTexture_c6knl")
+Button/styles/normal = SubResource("StyleBoxTexture_l86ai")
+Button/styles/pressed = SubResource("StyleBoxTexture_lapve")
+HSlider/icons/grabber = ExtResource("4_rym1q")
+HSlider/icons/grabber_disabled = ExtResource("4_rym1q")
+HSlider/icons/grabber_highlight = ExtResource("5_pwm4c")
+HSlider/styles/grabber_area = SubResource("StyleBoxFlat_gr2yy")
+HSlider/styles/grabber_area_highlight = SubResource("StyleBoxTexture_1qvt4")
+HSlider/styles/slider = SubResource("StyleBoxLine_kn1sk")
+Label/styles/normal = SubResource("StyleBoxTexture_vd4sx")
+TabContainer/colors/font_selected_color = Color(0.95, 0.95, 0.95, 1)
+TabContainer/colors/font_unselected_color = Color(0.94902, 0.94902, 0.94902, 1)
+TabContainer/icons/decrement = ExtResource("7_0rte8")
+TabContainer/icons/decrement_highlight = ExtResource("7_rfowu")
+TabContainer/icons/increment = ExtResource("9_380kh")
+TabContainer/icons/increment_highlight = ExtResource("8_nuwpy")
+TabContainer/styles/tab_focus = SubResource("StyleBoxEmpty_sm1c4")
+TabContainer/styles/tab_hovered = SubResource("StyleBoxTexture_th0ym")
+TabContainer/styles/tab_selected = SubResource("StyleBoxTexture_c4s0p")
+TabContainer/styles/tab_unselected = SubResource("StyleBoxTexture_7xg5e")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_iicd5"]
+texture = ExtResource("4_fm8cy")
+expand_margin_left = 30.0
+expand_margin_top = 15.0
+expand_margin_right = 15.0
+expand_margin_bottom = 15.0
+
+[node name="MenuCoffre" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_06whs")
+
+[node name="InventaireInterface" parent="." instance=ExtResource("2_4bapi")]
+layout_mode = 1
+offset_left = 297.0
+offset_top = -147.0
+offset_right = 297.0
+offset_bottom = -147.0
+
+[node name="ScrollContainer" type="ScrollContainer" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 85.0
+offset_right = 564.0
+offset_bottom = 625.0
+theme = SubResource("Theme_vkvd7")
+horizontal_scroll_mode = 0
+
+[node name="FicheStock" type="VBoxContainer" parent="ScrollContainer"]
+layout_mode = 2
+theme = SubResource("Theme_6nj0c")
+theme_override_constants/separation = 20
+
+[node name="ButtonAjouter" type="Button" parent="."]
+layout_mode = 0
+offset_left = 964.0
+offset_top = 283.0
+offset_right = 1103.0
+offset_bottom = 314.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_itmek")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1llgg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pv2eg")
+text = "Ajouter au coffre"
+
+[node name="ButtonPlus" type="Button" parent="."]
+layout_mode = 0
+offset_left = 916.0
+offset_top = 282.0
+offset_right = 934.0
+offset_bottom = 313.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_itmek")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1llgg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pv2eg")
+text = "+"
+
+[node name="ButtonMoins" type="Button" parent="."]
+layout_mode = 0
+offset_left = 886.0
+offset_top = 282.0
+offset_right = 900.0
+offset_bottom = 313.0
+theme_override_styles/focus = SubResource("StyleBoxEmpty_itmek")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_1llgg")
+theme_override_styles/normal = SubResource("StyleBoxTexture_pv2eg")
+text = "-"
+
+[node name="LabelQuantite" type="Label" parent="."]
+layout_mode = 0
+offset_left = 829.0
+offset_top = 287.0
+offset_right = 839.0
+offset_bottom = 310.0
+theme_override_styles/normal = SubResource("StyleBoxTexture_4lp2d")
+text = "0"
+
+[node name="TitreFicheStock" type="Label" parent="."]
+layout_mode = 2
+offset_left = 39.0
+offset_top = 16.0
+offset_right = 379.0
+offset_bottom = 85.0
+theme_override_colors/font_color = Color(0.376471, 0.329412, 0.258824, 1)
+theme_override_font_sizes/font_size = 50
+text = "Fiche de stock"
+
+[node name="TabContainer" type="TabContainer" parent="."]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 400.0
+offset_right = 1104.0
+offset_bottom = 610.0
+theme = SubResource("Theme_ui1y6")
+theme_override_styles/panel = SubResource("StyleBoxTexture_iicd5")
+
+[node name="Graphisme" type="Control" parent="."]
+anchors_preset = 0
+offset_top = -3.0
+offset_right = 1149.0
+offset_bottom = 650.0
+mouse_filter = 2
+
+[node name="Fond" type="Sprite2D" parent="Graphisme"]
+z_index = -1
+position = Vector2(575.25, 327.5)
+scale = Vector2(1.2481, 0.957971)
+texture = ExtResource("5_4c48o")
+
+[node name="Branche1" type="Sprite2D" parent="Graphisme"]
+position = Vector2(1087, 64)
+rotation = 0.0930539
+scale = Vector2(0.216782, 0.283307)
+texture = ExtResource("8_cu31w")
+
+[node name="Branche2" type="Sprite2D" parent="Graphisme"]
+position = Vector2(1071, 597)
+rotation = -1.31435
+scale = Vector2(0.216782, 0.283307)
+texture = ExtResource("8_cu31w")
+
+[connection signal="pressed" from="ButtonAjouter" to="." method="OnAddPressed"]
+[connection signal="pressed" from="ButtonPlus" to="." method="OnPlusPressed"]
+[connection signal="pressed" from="ButtonMoins" to="." method="OnMinusPressed"]

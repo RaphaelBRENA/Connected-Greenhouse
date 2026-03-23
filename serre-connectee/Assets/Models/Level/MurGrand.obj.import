@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://c13v5cp6dxlvt"
+path="res://.godot/imported/MurGrand.obj-2fd0732fe8eb4606105cd9601fd71ae8.mesh"
+
+[deps]
+
+files=["res://.godot/imported/MurGrand.obj-2fd0732fe8eb4606105cd9601fd71ae8.mesh"]
+
+source_file="res://Assets/Models/Level/MurGrand.obj"
+dest_files=["res://.godot/imported/MurGrand.obj-2fd0732fe8eb4606105cd9601fd71ae8.mesh", "res://.godot/imported/MurGrand.obj-2fd0732fe8eb4606105cd9601fd71ae8.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

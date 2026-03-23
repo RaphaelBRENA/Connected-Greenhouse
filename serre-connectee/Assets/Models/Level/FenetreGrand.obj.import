@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://bn3wvrf2d6n0c"
+path="res://.godot/imported/FenetreGrand.obj-3feed445a916c12b0bbd8c6d4355fa61.mesh"
+
+[deps]
+
+files=["res://.godot/imported/FenetreGrand.obj-3feed445a916c12b0bbd8c6d4355fa61.mesh"]
+
+source_file="res://Assets/Models/Level/FenetreGrand.obj"
+dest_files=["res://.godot/imported/FenetreGrand.obj-3feed445a916c12b0bbd8c6d4355fa61.mesh", "res://.godot/imported/FenetreGrand.obj-3feed445a916c12b0bbd8c6d4355fa61.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,22 @@
+[remap]
+
+importer="wavefront_obj"
+importer_version=1
+type="Mesh"
+uid="uid://dfoixixssbq8p"
+path="res://.godot/imported/Toit.obj-dccfafe2b6a060b439f1b5524031c24b.mesh"
+
+[deps]
+
+files=["res://.godot/imported/Toit.obj-dccfafe2b6a060b439f1b5524031c24b.mesh"]
+
+source_file="res://Assets/Models/Level/Toit.obj"
+dest_files=["res://.godot/imported/Toit.obj-dccfafe2b6a060b439f1b5524031c24b.mesh", "res://.godot/imported/Toit.obj-dccfafe2b6a060b439f1b5524031c24b.mesh"]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3(1, 1, 1)
+offset_mesh=Vector3(0, 0, 0)
+optimize_mesh=true
+force_disable_mesh_compression=false

@@ -1,0 +1,422 @@
+[gd_scene load_steps=16 format=3 uid="uid://ccchtxwjwyet4"]
+
+[ext_resource type="Script" path="res://Scripts/Menus/StartMenu.cs" id="1_btxp6"]
+[ext_resource type="Texture2D" uid="uid://dovuw5apmdh04" path="res://Assets/Images/ImagesPots/StartingBackground.png" id="2_eri66"]
+[ext_resource type="FontFile" uid="uid://b75athrhv71os" path="res://Assets/Fonts/AfacadFlux-VariableFont_slnt,wght.ttf" id="2_i8sc5"]
+[ext_resource type="Texture2D" uid="uid://dyctfw1f4k02g" path="res://Assets/Images/TitreCosmos.png" id="4_fyfum"]
+[ext_resource type="Texture2D" uid="uid://c2ohj2dv8y1al" path="res://Assets/Images/TexteCommencer.png" id="5_ajnfu"]
+[ext_resource type="Texture2D" uid="uid://di6mpbrx0bkuw" path="res://Assets/Images/TexteOptions.png" id="6_ctk80"]
+[ext_resource type="Texture2D" uid="uid://opfu11q81dsp" path="res://Assets/Images/TexteQuitter.png" id="7_gxnam"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_w7usw"]
+texture = ExtResource("2_eri66")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_kbigj"]
+texture = ExtResource("4_fyfum")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_cybiu"]
+texture = ExtResource("5_ajnfu")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_jju2r"]
+texture = ExtResource("6_ctk80")
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_2613k"]
+texture = ExtResource("7_gxnam")
+
+[sub_resource type="Animation" id="Animation_ue7eh"]
+length = 0.001
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("VBoxContainer:modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("VBoxContainer:modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("VBoxContainer:modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("VBoxContainer:modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("Title:self_modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("Title:self_modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("Title:self_modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("Title:self_modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(205, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(292, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Title:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(350, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Title:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0),
+"points": PackedFloat32Array(50, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0)
+}
+
+[sub_resource type="Animation" id="Animation_84xf6"]
+resource_name = "lancement"
+length = 2.0
+tracks/0/type = "bezier"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Title:self_modulate:r")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 1)
+}
+tracks/1/type = "bezier"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Title:self_modulate:g")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 1)
+}
+tracks/2/type = "bezier"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("Title:self_modulate:b")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 1)
+}
+tracks/3/type = "bezier"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("Title:self_modulate:a")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 1)
+}
+tracks/4/type = "bezier"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("VBoxContainer:modulate:r")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.7)
+}
+tracks/5/type = "bezier"
+tracks/5/imported = false
+tracks/5/enabled = true
+tracks/5/path = NodePath("VBoxContainer:modulate:g")
+tracks/5/interp = 1
+tracks/5/loop_wrap = true
+tracks/5/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.7)
+}
+tracks/6/type = "bezier"
+tracks/6/imported = false
+tracks/6/enabled = true
+tracks/6/path = NodePath("VBoxContainer:modulate:b")
+tracks/6/interp = 1
+tracks/6/loop_wrap = true
+tracks/6/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(1, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.7)
+}
+tracks/7/type = "bezier"
+tracks/7/imported = false
+tracks/7/enabled = true
+tracks/7/path = NodePath("VBoxContainer:modulate:a")
+tracks/7/interp = 1
+tracks/7/loop_wrap = true
+tracks/7/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(0, -0.25, 0, 0.25, 0, 1, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.7)
+}
+tracks/8/type = "bezier"
+tracks/8/imported = false
+tracks/8/enabled = true
+tracks/8/path = NodePath("VBoxContainer:position:x")
+tracks/8/interp = 1
+tracks/8/loop_wrap = true
+tracks/8/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(205, -0.25, 0, 0.25, 0, 235, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.7)
+}
+tracks/9/type = "bezier"
+tracks/9/imported = false
+tracks/9/enabled = true
+tracks/9/path = NodePath("VBoxContainer:position:y")
+tracks/9/interp = 1
+tracks/9/loop_wrap = true
+tracks/9/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(292, -0.25, 0, 0.25, 0, 292, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(1, 1.7)
+}
+tracks/10/type = "bezier"
+tracks/10/imported = false
+tracks/10/enabled = true
+tracks/10/path = NodePath("Title:position:x")
+tracks/10/interp = 1
+tracks/10/loop_wrap = true
+tracks/10/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(350, -0.25, 0, 0.25, 0, 350, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 1)
+}
+tracks/11/type = "bezier"
+tracks/11/imported = false
+tracks/11/enabled = true
+tracks/11/path = NodePath("Title:position:y")
+tracks/11/interp = 1
+tracks/11/loop_wrap = true
+tracks/11/keys = {
+"handle_modes": PackedInt32Array(0, 0),
+"points": PackedFloat32Array(50, -0.25, 0, 0.25, 0, 80, -0.25, 0, 0.25, 0),
+"times": PackedFloat32Array(0.3, 1)
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_x7ybu"]
+_data = {
+"RESET": SubResource("Animation_ue7eh"),
+"lancement": SubResource("Animation_84xf6")
+}
+
+[node name="StartMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_btxp6")
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/panel = SubResource("StyleBoxTexture_w7usw")
+
+[node name="Title" type="Label" parent="."]
+self_modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.305
+anchor_top = 0.08
+anchor_right = 0.702
+anchor_bottom = 0.349
+offset_left = -1.36002
+offset_top = 28.16
+offset_right = -0.704041
+offset_bottom = 27.848
+grow_horizontal = 2
+theme_override_styles/normal = SubResource("StyleBoxTexture_kbigj")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = 13
+anchor_left = 0.5
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -341.0
+offset_top = 279.0
+offset_right = -41.0
+offset_bottom = -85.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="Commencer" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 90)
+layout_mode = 2
+size_flags_vertical = 4
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_i8sc5")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/focus = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/hover = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_cybiu")
+theme_override_styles/normal = SubResource("StyleBoxTexture_cybiu")
+text = "
+"
+alignment = 0
+
+[node name="Options" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 80)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_i8sc5")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/focus = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/hover = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_jju2r")
+theme_override_styles/normal = SubResource("StyleBoxTexture_jju2r")
+alignment = 0
+
+[node name="Quitter" type="Button" parent="VBoxContainer"]
+custom_minimum_size = Vector2(300, 78)
+layout_mode = 2
+theme_override_colors/font_color = Color(1, 1, 1, 1)
+theme_override_fonts/font = ExtResource("2_i8sc5")
+theme_override_font_sizes/font_size = 38
+theme_override_styles/focus = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/disabled_mirrored = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/disabled = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/hover_pressed_mirrored = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/hover_pressed = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/hover_mirrored = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/hover = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/pressed_mirrored = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/normal_mirrored = SubResource("StyleBoxTexture_2613k")
+theme_override_styles/normal = SubResource("StyleBoxTexture_2613k")
+alignment = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_x7ybu")
+}
+autoplay = "lancement"
+playback_auto_capture = false
+
+[connection signal="pressed" from="VBoxContainer/Commencer" to="." method="OnStartPressed"]
+[connection signal="pressed" from="VBoxContainer/Options" to="." method="OnOptionsPressed"]
+[connection signal="pressed" from="VBoxContainer/Quitter" to="." method="OnExitPressed"]
